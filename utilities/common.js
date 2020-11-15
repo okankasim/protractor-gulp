@@ -2,7 +2,7 @@ let commonAction = function() {
 
     this.clickElement = (element) => {
         let EC = protractor.ExpectedConditions;
-        browser.wait(EC.visibilityOf(element), 10000);
+        browser.wait(EC.visibilityOf(element), 5000);
         element.click();
     }
 
@@ -18,6 +18,11 @@ let commonAction = function() {
 
     this.enterText = (text, element) => {
         element.sendKeys(text)
+    }
+    this.waitAndEnterText = (text, element) => {
+        let EC = protractor.ExpectedConditions;
+        browser.wait(EC.visibilityOf(element), 10000);
+        element.clear().sendKeys(text)
     }
 
     this.verifyPage = (element) => {

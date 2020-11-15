@@ -36,4 +36,17 @@ gulp.task('seabourn', function() {
         .on('error', function(e) { throw e })
 })
 
+gulp.task('instagram', function() {
+    gulp.src(["./tests/instagram.js"])
+    .pipe(notify('Change Found', 'Executing Scripts'))
+        .pipe(protractor({
+            configFile:  "config.js",
+            args: [
+                '--params.url', 'https://www.instagram.com/',
+                '--suite', 'instagram'
+            ]
+        }))
+        .on('error', function(e) { throw e })
+})
+
 

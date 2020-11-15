@@ -9,16 +9,17 @@ exports.config ={
 			shardTestFiles: true
 }
 ],
- specs: ["../tests/holland-america-tests.js", '../tests/seabourn.js'],
+ specs: ["../tests/holland-america-tests.js", '../tests/seabourn.js', './tests/instagram.js'],
   
 suites: {
       holland: "./tests/holland-america-tests.js",
-      seabourn: './tests/seabourn.js'
+      seabourn: './tests/seabourn.js',
+      instagram: './tests/instagram.js'
    },
 
 jasmineNodeOpts: {
   showColors: true,
-  defaultTimeoutInterval : 30000
+  defaultTimeoutInterval : 600000
 },
   onPrepare: function(){ 
       browser.waitForAngularEnabled(false); 

@@ -8,9 +8,9 @@ describe('Holland America', function () {
     it('Verify home page', function () {
         commonAction.verifyPage(instagram.username);
         console.log('Executed verify page')
-        commonAction.enterText('naturistyc', instagram.username)
+        commonAction.enterText('Yourusername', instagram.username)
         console.log('Entered username enter')
-        commonAction.enterText('cybertek2019', instagram.password)
+        commonAction.enterText('YourPasword', instagram.password)
         console.log('Entered password enter')
         commonAction.clickElement(instagram.loginButton)
         console.log('Executed login button click')
